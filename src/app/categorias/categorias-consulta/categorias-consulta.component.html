@@ -1,0 +1,21 @@
+<div class="container">
+  <h1 class="">Angular 13 HTML Table Example</h1>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>#ID</th>
+        <th>Nombre</th>
+        <th>Descripcion</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of categorias">
+        <th><a [routerLink]="['/categoria/detalle',item.idcategoria]">{{ item.idcategoria }}</a>
+        </th>
+        <td>{{ item.nombre }}</td>
+        <td>{{ item.descripcion }}</td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>

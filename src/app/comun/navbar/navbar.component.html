@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target = "#navbarSupportedContent" aria-controls = "navbarSupportedContent" aria-expanded="false" aria-label = "Toggle navigation">
+     <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse d-flex justify-content-around" id="navbarSupportedContent">
+     <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a class="nav-link" routerLink="">Inicio</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">Categorias</a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" routerLink = "categoria/alta">Alta</a></li>
+            <li><a class="dropdown-item" routerLink = "categoria/consulta">Consulta/mto</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">Libros</a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" routerLink = "altaLibro">Alta</a></li>
+            <li><a class="dropdown-item" routerLink = "consultaLibro">Consulta/mto</a></li>
+          </ul>
+        </li>
+     </ul>
+     <form class="d-flex">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
