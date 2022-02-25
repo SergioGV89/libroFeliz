@@ -12,6 +12,7 @@ const routes: Routes = [
   {path:"categoria/alta",component:CategoriasAltaComponent},
   {path:"categoria/consulta",component:CategoriasConsultaComponent},
   {path:'categoria/detalle/:idcategoria',component:CategoriasDetalleComponent},
+  {path:'categoria/detalle/:idcategoria/volver',component:CategoriasConsultaComponent},
   {path:"**",component:NotfoundComponent}
 ];
 

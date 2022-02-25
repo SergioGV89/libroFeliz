@@ -33,10 +33,38 @@ private id=0
   public getCategoria()
   {
     this.servicioCategoria.getCategoria(this.id).subscribe({
-      next:((data)=>JSON.stringify( this.categoria=data)),
+      next:((data)=>this.categoria=data),
       error:((error)=>console.log(error)),
-      complete:(()=>console.log("CATEGORIA"+this.id))
+      complete:(()=>console.log(+this.id))
     })
   }
+
+  /**
+   * deleteCategoria
+   */
+  public deleteCategoria() {
+    this.servicioCategoria.deleteCategoria(this.categoria).subscribe({
+      next:((resp)=>{console.log(resp)}),
+      error:((error)=>console.log(error)),
+      complete:(()=>{alert("baja efectuada")
+     })
+    })
+
+
+  }
+  /**
+   * modificarCategoria
+   */
+  public modificarCategoria() {
+    this.servicioCategoria.modificarCategoria(this.categoria).subscribe({
+      next:((resp)=>console.log(resp)),
+      error:((error)=>console.log(error)),
+      complete:(()=>alert("modificacion efectuada niceee"))
+    })
+
+  }
+
+
+
 
 }

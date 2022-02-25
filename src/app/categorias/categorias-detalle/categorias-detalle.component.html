@@ -1,4 +1,4 @@
-<form class="container mt-5" [noValidate]="true" #formulario="ngForm">
+<form class="container mt-5" [noValidate]="true" #formulario="ngForm" >
   <div class="form-group row">
     <label for="nombre" class="col-2 col-form-label">Nombre</label>
     <div class="col-8">
@@ -14,8 +14,9 @@
   <div class="form-group row">
     <label class="col-2 col-form-label">&nbsp;</label>
     <div class="input-group col-md-8">
-      <button type="submit" class="btn btn-outline-primary" [disabled]="formulario.invalid">Borrar</button>
-      <button type="submit" class="btn btn-outline-primary" [disabled]="formulario.invalid">Modificar</button>
+      <button (click)="deleteCategoria()" type="submit" class="btn btn-outline-primary" [disabled]="formulario.invalid">Borrar</button>
+      <button  (click)="modificarCategoria()"  class="btn btn-outline-primary" [disabled]="formulario.invalid">Modificar</button>
+      <button [routerLink]="['volver']" >volver a lista Categoria</button>
     </div>
   </div>
 </form>

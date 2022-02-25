@@ -34,4 +34,18 @@ export class CategoriaService {
     return this.Ajax.get<Categoria>(CategoriaService.api+"consultacategorias.php?idcategoria="+id)
 
   }
+  /**
+   * deleteCategoria
+   */
+  public deleteCategoria(categoria:Categoria):Observable<Categoria> {
+    return this.Ajax.post<Categoria>(CategoriaService.api+"bajacategoria.php?idcategoria=",JSON.stringify(categoria))
+
+  }
+  /**
+   * modificarCategoria
+   */
+  public modificarCategoria(categoria:Categoria):Observable<Categoria> {
+    return this.Ajax.post<Categoria>( CategoriaService.api+"modificacategoria.php?idcategoria",JSON.stringify(categoria))
+
+  }
 }
